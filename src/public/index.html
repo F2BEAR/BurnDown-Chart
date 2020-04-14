@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BurnDown-ChartJS</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="content">
+      <h1>BurnDown Chart</h1>
+      <div class="btnContainer">
+        <button id="idealBtn" class="btn">Ideal</button>
+        <!--ideal modal-->
+        <div id="ideal-modal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="ideal-close">&times;</span>
+            <form class="modalForm">
+              <label class="inputLabel">Ideal Points: </label>
+              <input type="text" id="idealPointInput" class="modalImput" />
+              <button type="button" id="submitIdealButton" class="btn">
+                Submit
+              </button>
+              <span id="IdealMessageError" class="error"></span>
+            </form>
+          </div>
+        </div>
+
+        <button id="doneBtn" class="btn">Done</button>
+        <!--done modal-->
+        <div id="done-modal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="done-close">&times;</span>
+            <form class="modalForm">
+              <label class="inputLabel">Done Points: </label>
+              <input type="text" id="donePointInput" class="modalImput" />
+              <button type="button" id="submitDoneButton" class="btn">
+                Submit
+              </button>
+              <span id="DoneMessageError" class="error"></span>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--chart-->
+      <canvas id="myChart" width="50" height="25"></canvas>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+    <script type="text/javascript" src="/js/modal.js"></script>
+    <script type="text/javascript" src="/js/submition.js"></script>
+  </body>
+</html>

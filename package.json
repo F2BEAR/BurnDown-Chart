@@ -1,0 +1,18 @@
+{
+  "name": "BurnDownChartJS",
+  "version": "1.0.0",
+  "description": "ExpressJs BurnDown chart generator using ChartJS",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "chart.js": "2.9.3",
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "1.18.4"
+  },
+  "keywords": []
+}
