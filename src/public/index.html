@@ -7,8 +7,10 @@
   </head>
 
   <body>
-    <div class="content">
+    <header class="pageHeader">
       <h1>BurnDown Chart</h1>
+    </header>
+    <div class="content">
       <div class="btnContainer">
         <button id="idealBtn" class="btn">Ideal</button>
         <!--ideal modal-->
@@ -41,15 +43,22 @@
             </form>
           </div>
         </div>
+        <!--Save button-->
+        <button id="saveBtn" class="btn">Save</button>
       </div>
+      <br>
       <!--chart-->
       <canvas id="myChart" width="50" height="25"></canvas>
     </div>
+    <footer class="pageFooter">
+      <h3>Made by Facundo Carbonel</h3>
+    </footer>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"
     ></script>
     <script type="text/javascript" src="/js/modal.js"></script>
-    <script type="text/javascript" src="/js/submition.js"></script>
+    <script type="text/javascript" src="/js/chart.js"></script>
+    <script type="text/javascript" src="/js/save.js"></script>
   </body>
 </html>

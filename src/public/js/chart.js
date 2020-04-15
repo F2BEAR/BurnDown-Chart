@@ -79,6 +79,7 @@ window.onload = function () {
     let idealValue = ideal.value;
 
     if (idealValue === "") {
+      ideal.value = "";
       idealErrorMessagge.style.display = "block";
       idealErrorMessagge.innerHTML = "Empty Input";
 
@@ -90,6 +91,7 @@ window.onload = function () {
       let idealNumber = parseInt(idealValue);
 
       if (Number.isNaN(idealNumber)) {
+        ideal.value = "";
         idealErrorMessagge.style.display = "block";
         idealErrorMessagge.innerHTML = "Enter a Number";
 
@@ -111,6 +113,7 @@ window.onload = function () {
     let doneValue = done.value;
 
     if (doneValue === "") {
+      done.value = "";
       doneErrorMessagge.style.display = "block";
       doneErrorMessagge.innerHTML = "Empty Input";
     } else {
@@ -120,6 +123,7 @@ window.onload = function () {
       let doneNumber = parseInt(doneValue);
 
       if (Number.isNaN(doneNumber)) {
+        done.value = "";
         doneErrorMessagge.style.display = "block";
         doneErrorMessagge.innerHTML = "Enter a Number";
 
