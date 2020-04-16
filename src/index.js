@@ -14,3 +14,14 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/index.html"));
 });
+
+app.post("/saveAsJson", (req, res) => {
+  let signUp = require('./saveAsJson.js');
+  signUp.collect(req, res);
+  res.sendStatus(200);
+});
+
+app.get('/saved.json', (req, res) => {
+  res.sendStatus(200);
+  res.sendFile(path.join(__dirname, "../saved.json"));
+});

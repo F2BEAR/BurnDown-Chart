@@ -13,6 +13,27 @@ let idealErrorMessagge = document.getElementById("IdealMessageError");
 let doneErrorMessagge = document.getElementById("DoneMessageError");
 
 window.onload = function () {
+  readData = (path, callback) => {
+    let request = new this.XMLHttpRequest();
+    request.onreadystatechange = () => {
+      if (request.status === 200) {
+        let data = request.responseText;
+        if (callback) {
+          callback(data);
+        }
+      }
+    };
+    request.open("GET", path);
+    request.send();
+  };
+
+  readData(
+    "/saved.json",
+    (callback = (data) => {
+      console.log(data);
+    })
+  );
+
   let myChart = new Chart(ctx, {
     type: "line",
     data: {
