@@ -16,9 +16,6 @@ Esta aplicacion cuenta con:
 
 ## Documentación
 
-La documentacion de este sitio web esta realizada con vuepress, para ingresar a la misma haz click [aqui](https://agendapp.uy) !
+La documentacion de este sitio web esta realizada con vuepress, para ingresar a la misma haz click [aqui](https://agendapp.uy)!
 
-## Preguntas
-
-Por cualquier consulta contactarse a traves de nuestra dirección de correo electrónico [contacto@agendapp.uy](contacto@agendapp.uy) .
 
