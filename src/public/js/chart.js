@@ -16,23 +16,21 @@ window.onload = function () {
   readData = (path, callback) => {
     let request = new this.XMLHttpRequest();
     request.onreadystatechange = () => {
-      if (request.status === 200) {
-        let data = request.responseText;
-        if (callback) {
-          callback(data);
-        }
-      }
+      let data = request.responseText;
+      callback(data);
     };
     request.open("GET", path);
     request.send();
   };
 
-  readData(
-    "/saved.json",
-    (callback = (data) => {
-      console.log(data);
-    })
-  );
+  let callback = (rawData) => {
+    let data = this.JSON.parse(rawData);
+    ideal = data.ideal;
+    done = data.done;
+    console.log(ideal);
+  };
+
+  readData("/saved.json", callback());
 
   let myChart = new Chart(ctx, {
     type: "line",

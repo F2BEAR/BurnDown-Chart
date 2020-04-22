@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 const express = require("express");
 const app = express();
 
@@ -22,6 +23,8 @@ app.post("/saveAsJson", (req, res) => {
 });
 
 app.get('/saved.json', (req, res) => {
+  rawData = fs.readFileSync(path.join(__dirname, "../saved.json"));
+  data = JSON.parse(rawData);
+  res.send(data);
   res.sendStatus(200);
-  res.sendFile(path.join(__dirname, "../saved.json"));
 });
